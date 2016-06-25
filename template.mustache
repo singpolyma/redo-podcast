@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-CA" lang="en-CA">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Podcast Title</title>
+
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+		<link rel="alternate" type="application/rss+xml" title="Podcast" href="/index.xml" />
+		<script type="text/javascript" src="/html5shiv.js"></script>
+	</head>
+
+	<body>
+		<h1>Website</h1>
+
+		<section class="hfeed">
+			<h1>Podcast</h1>
+
+			<ol>
+				{{#episodes}}
+					<li>
+						<article class="hentry">
+							<h1 class="entry-title"><a rel="bookmark enclosure" href="{{file}}">{{title}}</a></h1>
+							<time class="published" datetime="{{published}}">{{published}}</time>
+						</article>
+					</li>
+				{{/episodes}}
+			</ol>
+
+			<footer>
+				<p>Can't hear the episodes? <a href="http://videolan.org/vlc/">Download VLC</a></p>
+
+				{{#prev}}
+					<a rel="prev" href="{{uri}}">« {{fn}}</a>
+				{{/prev}}
+
+				{{#next}}
+					<a rel="next" href="{{uri}}">{{fn}} »</a>
+				{{/next}}
+			</footer>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title>Podcast Title</title>
+		<link>http://example.org</link>
+
+		{{#episodes}}
+			<item>
+				<title>{{title}}</title>
+				<link>http://example.org{{file}}</link>
+				<guid>http://example.org{{file}}</guid>
+				<enclosure url="http://example.org{{file}}" type="audio/opus" length="{{fileSize}}" />
+				<pubDate>{{rssPublished}}</pubDate>
+			</item>
+		{{/episodes}}
+	</channel>
+</rss>

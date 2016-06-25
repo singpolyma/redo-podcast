@@ -1,0 +1,5 @@
+A simple podcast generator written using redo.
+
+Put audio files in "audio/%Y%j Title of Episode.opus"
+
+Depends on: redo, ruby, mustache (gem)
